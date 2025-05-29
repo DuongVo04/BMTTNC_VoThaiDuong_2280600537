@@ -11,7 +11,7 @@
     <div class="container">
         <table class="table">
             <tr>
-                <td style="text-align: center; font-weight: bold; font-size: 25px;">CAESAR CIPHER</td>
+                <td style="text-align: center; font-weight: bold; font-size: 25px;">PLAYFAIR CIPHER</td>
             </tr>
             <tr>
                 <td style="font-weight: bold; color: blue">ENCRYPTION</td>
@@ -26,7 +26,7 @@
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Key:</label>
-                            <input type="number" class="form-control" name="inputKeyPlain" placeholder="Input Key"
+                            <input type="text" class="form-control" name="inputKeyPlain" placeholder="Input Key"
                                 required />
                         </div>
                         <button type="submit" class="btn btn-primary">Encrypt</button>
@@ -49,7 +49,7 @@
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Key:</label>
-                            <input type="number" class="form-control" name="inputKeyCipher" placeholder="Input Key"
+                            <input type="text" class="form-control" name="inputKeyCipher" placeholder="Input Key"
                                 required />
                         </div>
                         <button type="submit" class="btn btn-success">Decrypt</button>
@@ -68,7 +68,7 @@
             e.preventDefault();
             $.ajax({
                 type: 'POST',
-                url: '/caesar/encrypt',
+                url: '/playfair/encrypt',
                 data: $(this).serialize(),
                 success: function (response) {
                     $('#encrypt-result').html(response);
@@ -81,7 +81,7 @@
 
             $.ajax({
                 type: 'POST',
-                url: '/caesar/decrypt',
+                url: '/playfair/decrypt',
                 data: $(this).serialize(),
                 success: function (response) {
                     $('#decrypt-result').html(response);

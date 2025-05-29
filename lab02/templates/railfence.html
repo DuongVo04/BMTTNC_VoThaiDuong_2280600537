@@ -11,7 +11,7 @@
     <div class="container">
         <table class="table">
             <tr>
-                <td style="text-align: center; font-weight: bold; font-size: 25px;">CAESAR CIPHER</td>
+                <td style="text-align: center; font-weight: bold; font-size: 25px;">RAILFENCE CIPHER</td>
             </tr>
             <tr>
                 <td style="font-weight: bold; color: blue">ENCRYPTION</td>
@@ -68,7 +68,7 @@
             e.preventDefault();
             $.ajax({
                 type: 'POST',
-                url: '/caesar/encrypt',
+                url: '/railfence/encrypt',
                 data: $(this).serialize(),
                 success: function (response) {
                     $('#encrypt-result').html(response);
@@ -81,7 +81,7 @@
 
             $.ajax({
                 type: 'POST',
-                url: '/caesar/decrypt',
+                url: '/railfence/decrypt',
                 data: $(this).serialize(),
                 success: function (response) {
                     $('#decrypt-result').html(response);
